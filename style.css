@@ -1,0 +1,138 @@
+:root {
+  --bg-color: #1e1e1e;
+  --text-color: #e0e0e0;
+  --accent-color: #00ff9d;
+  --sticky-color: #2d2d2d;
+  --button-color: #3d3d3d;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  background-image:
+    radial-gradient(circle, var(--text-color) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+}
+
+#todo-form {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+#todo-input {
+  flex-grow: 1;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 5px 0 0 5px;
+  font-family: inherit;
+}
+
+#add-todo {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: inherit;
+}
+
+#add-todo:hover {
+  background-color: #00cc7d;
+}
+
+#todo-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-item {
+  background-color: var(--sticky-color);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.todo-item:hover {
+  transform: translateY(-3px);
+}
+
+.todo-text {
+  flex-grow: 1;
+  margin-right: 1rem;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn {
+  background-color: var(--button-color);
+  color: var(--text-color);
+}
+
+.delete-btn {
+  background-color: #ff4757;
+  color: var(--text-color);
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+  opacity: 0.8;
+}
+
+.editing .todo-text {
+  display: none;
+}
+
+.editing .edit-input {
+  display: block;
+  flex-grow: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 3px;
+  margin-right: 1rem;
+  font-family: inherit;
+}
+
+.edit-input {
+  display: none;
+}
