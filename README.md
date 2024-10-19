@@ -1,6 +1,6 @@
 # Todo Web App
 
-A minimalistic, dark-themed todo application with a techy UI.
+A minimalistic, dark-themed todo application.
 
 ## Features
 
